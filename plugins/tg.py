@@ -1,5 +1,9 @@
 from telegraph import Telegraph, exceptions, upload_file
 
+
+@ultroid_cmd(
+    pattern="tg( (.*)|$)",
+)
 async def tg_cmd(client, message):
     XD = await message.reply("<code>Processing... . .</code>")
     if not message.reply_to_message:
