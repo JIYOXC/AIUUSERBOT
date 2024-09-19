@@ -4,6 +4,9 @@ import numpy as np
 from dateutil.relativedelta import relativedelta
 from datetime import datetime
 from . import ultroid_cmd
+from . import get_help
+
+__doc__ = get_help("help_creationdate")
 
 data = {
     "7117444122": 1723429195,
