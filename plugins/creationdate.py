@@ -67,7 +67,7 @@ class UserDateEstimator:
 
 interpolation = UserDateEstimator()
 
-@ultroid_cmd(pattern="actime$")
+@ultroid_cmd(pattern="actime(?: (.*))?$")
 async def acc_create_date(event):
     """Ultroid command to get the account creation date."""
     input_str = event.pattern_match.group(1)
