@@ -1,13 +1,11 @@
 import google.generativeai as genai
 import requests
-from pyrogram import *
 from pyrogram import Client, filters
-from pyrogram.types import *
 from RyuzakiLib import FaceAI, FullStackDev, GeminiLatest, RendyDevChat
 from pyUltroid.dB.database import db
-from pyUltroid.dB.handler import *
 from pyUltroid.dB.logger import LOGS
 from . import ultroid_cmd
+
 async def mistraai(messagestr):
     url = "https://randydev-ryuzaki-api.hf.space/api/v1/akeno/mistralai"
     payload = {"args": messagestr}
