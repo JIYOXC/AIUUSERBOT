@@ -21,7 +21,7 @@ from datetime import datetime as dt
 
 from g4f.client import Client as Clients_g4f
 
-from Akeno.utils.logger import LOGS
+from pyUltroid.dB.logger import LOGS
 
 owner_base = f"""
 Your name is Randy Dev. A kind and friendly AI assistant that answers in
