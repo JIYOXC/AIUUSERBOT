@@ -1,5 +1,5 @@
 from telegraph import Telegraph, exceptions, upload_file
-
+from . import ultroid_cmd
 
 @ultroid_cmd(
     pattern="tg( (.*)|$)",
