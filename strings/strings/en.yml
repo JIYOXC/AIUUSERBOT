@@ -138,10 +138,10 @@ autopic_4: "AUTOPIC was not in use !!"
 autopic_5: "AUTOPIC Stopped!"
 
 # inline
-inline_1: "** {}.\n\MODUL ~ {}**"
+inline_1: "** {}.\n\nMODUL ~ {}**"
 inline_2: "** {}.\n\nAᴅᴅᴏɴs ~ **"
 inline_3: "** {}.\n\nAᴅᴅᴏɴs ~ {}\n\nDᴏ **`.setdb ADDONS True`** ᴀɴᴅ ʀᴇsᴛᴀʀᴛ ᴛᴏ ɢᴇᴛ ᴀᴅᴅᴏɴs.**"
-inline_4: "** {}\n\❏ Menu inline\n\n🅼🅾🅳🆄🅻 ~ {}\n**"
+inline_4: "** {}\n\n❏ Menu inline\n\MODUL ~ {}\n**"
 inline_5: "**Mᴇɴᴜ Hᴀs Bᴇᴇɴ Cʟᴏsᴇᴅ**"
 inline_6: "**Voice Chat Help Menu for {}**\n**Available Commands:** `{}`\n\n@AIUSUPPORT"
 inline_7: "Do .help {} to get the list of commands."
