@@ -5,7 +5,7 @@ from motor import motor_asyncio
 from motor.core import AgnosticClient
 
 from pyUltroid.dB.logger import LOGS
-from pyUltroid.configs import MONGO_URL
+from pyUltroid.configs import MONGO_URI
 
 
 class Database:
