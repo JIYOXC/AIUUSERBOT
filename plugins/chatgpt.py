@@ -34,7 +34,7 @@ def get_gpt_answer(gen_image, question, api_key):
             user="arc",
         )
         return x["data"][0]["url"]
-    x = openai.completion.create(
+    x = openai.completions.create(
         model="text-davinci-003",
         prompt=question,
         temperature=0.5,
