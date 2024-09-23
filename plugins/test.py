@@ -6,16 +6,9 @@ from pyUltroid.dB.database import db
 from pyUltroid.dB.logger import LOGS
 from . import ultroid_cmd
 
-async def mistraai(messagestr):
-    url = "https://randydev-ryuzaki-api.hf.space/api/v1/akeno/mistralai"
-    payload = {"args": messagestr}
-    response = requests.post(url, json=payload)
-    if response.status_code != 200:
-        return None
-    return response.json()
 
 async def chatgptold(messagestr):
-    url = "https://randydev-ryuzaki-api.hf.space/ryuzaki/chatgpt-old"
+    url = "https://akeno.randydev.my.id/api/akeno-ai-web"
     payload = {"query": messagestr}
     response = requests.post(url, json=payload)
     if response.status_code != 200:
@@ -23,8 +16,8 @@ async def chatgptold(messagestr):
     return response.json()
     
 
-@ultroid_cmd(pattern="ask$")
-async def ask(client, message):
+@ultroid_cmd(pattern="askold$")
+async def chatgpt_old_(client, message):
     if len(message.command) > 1:
         prompt = message.text.split(maxsplit=1)[1]
     elif message.reply_to_message:
