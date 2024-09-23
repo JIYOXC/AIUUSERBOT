@@ -35,7 +35,7 @@ def get_gpt_answer(gen_image, question, api_key):
         )
         return x["data"][0]["url"]
     x = openai.completions.create(
-        model="text-davinci-003",
+        model="gpt-4o-mini",
         prompt=question,
         temperature=0.5,
         stop=None,
