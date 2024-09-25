@@ -14,12 +14,8 @@
 
 import asyncio
 import os
-
-try:
-    import openai
-except ImportError:
-    os.system("pip install -q openai")
-    import openai
+import openai
+import time
 
 from . import ultroid_cmd, check_filename, udB, LOGS, fast_download
 
@@ -46,6 +42,20 @@ def get_gpt_answer(gen_image, question, api_key):
     LOGS.debug(f'Token Used on ({question}) > {x["usage"]["total_tokens"]}')
     return x["choices"][0].text.strip()
 
+
+def make_api_call(prompt):
+    try:
+        response = openai.Completion.create(
+            # ... your API parameters ...
+        )
+        return response
+    except openai.error.RateLimitError as e:
+        # Handle rate limiting
+        print(f"Rate limited: {e}")
+        time.sleep(5)  # Wait for 5 seconds
+        return make_api_call(prompt)  # Retry the call
+
+# ... your code to call the make_api_call function ...
 
 @ultroid_cmd(pattern="gpt ?(.*)")
 async def openai_chat_gpt(e):
