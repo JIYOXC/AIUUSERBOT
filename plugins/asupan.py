@@ -63,3 +63,19 @@ async def _(event):
     except Exception:
         await xx.edit("**Tidak bisa menemukan pap couple.**")
 
+@ultroid_cmd(pattern="desahcewe$")
+async def _(event):
+    xx = await event.eor(get_string("asupan_1")
+    try:
+        desahcewe = [
+            desah
+            async for desah in event.client.iter_messages(
+                "@desahancewesangesange", filter=InputMessagesFilterVoice
+            )
+        ]
+        await event.client.send_file(
+            event.chat_id, file=choice(desahcewe), reply_to=event.reply_to_msg_id
+        )
+        await xx.delete()
+    except Exception:
+        await xx.edit("**Tidak bisa menemukan desahan cewe.**")
