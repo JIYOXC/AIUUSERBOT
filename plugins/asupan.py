@@ -63,9 +63,9 @@ async def _(event):
     except Exception:
         await xx.edit("**Tidak bisa menemukan pap couple.**")
 
-@ultroid_cmd(pattern="desahcewe$")
+@ultroid_cmd(pattern="desah$")
 async def _(event):
-    xx = await event.eor(get_string("asupan_1")
+    xx = await event.eor(get_string("asupan_1"))
     try:
         desahcewe = [
             desah
