@@ -27,7 +27,7 @@ _main_help_menu = [
         #Button.inline(get_string("help_7"), data="inlone"),
     ],
    [ 
-        Button.url("PUKI"), url=f"https://t.me/{asst.me.username}?start=set"),
+        Button.url(get_string("help_9"), url=f"https://t.me/{asst.me.username}?start=set"),
         
     [Button.inline(get_string("help_10"), data="close")],
 ]
