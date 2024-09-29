@@ -12,7 +12,7 @@ from io import BytesIO
 
 from . import async_searcher, LOGS, ultroid_cmd
 
-@ultroid_cmd(pattern="askold( ([\s\S]*)|$)")
+@ultroid_cmd(pattern="askold( ([\\s\\S]*)|$)")
 async def chatgpt_old(e):
     query = e.pattern_match.group(2)
     reply = await e.get_reply_message()
