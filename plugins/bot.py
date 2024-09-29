@@ -214,7 +214,7 @@ async def mention_user(user_id):
     except Exception as e:
         print(f"Failed to mention user: {e}")
 
-@ultroid_cmd(pattern="ping(|x|s)$", chats=[], type=["official", "assistant"])
+@ultroid_cmd(pattern="kping(|x|s)$", chats=[], type=["official", "assistant"])
 #@register(incoming=True, from_users=DEVS, pattern=r"Cping")
 async def _(event):
     ultroid_bot.parse_mode = CustomMarkdown()
