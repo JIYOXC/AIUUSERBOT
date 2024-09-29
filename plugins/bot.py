@@ -214,7 +214,7 @@ async def mention_user(user_id):
     except Exception as e:
         print(f"Failed to mention user: {e}")
 
-@ultroid_cmd(pattern="xping(|x|s)$", chats=[], type=["official", "assistant"])
+@ultroid_cmd(pattern="ping(|x|s)$", chats=[], type=["official", "assistant"])
 #@register(incoming=True, from_users=DEVS, pattern=r"Cping")
 async def _(event):
     ultroid_bot.parse_mode = CustomMarkdown()
@@ -245,15 +245,7 @@ async def _(event):
     x = await event.eor("Pong !")
     end = round((time.time() - start) * 1000)
     uptime = time_formatter((time.time() - start_time) * 1000)
-    await x.edit(get_string("ping").format(end, uptime, f"{ment}"))
-
-@ultroid_cmd(pattern="kping", chats=[], type=["official", "assistant"])
-async def _(event):
-    start = datetime.now()
-    end = datetime.now()
-    ms = (end - start).microseconds
-    pin = f"🌋Pɪɴɢ = {ms} microseconds"
-    await event.answer(pin, cache_time=0, alert=True)
+    await event.respond(get_string("ping").format(end, uptime, f"{ment}"))
 
 
 @ultroid_cmd(
