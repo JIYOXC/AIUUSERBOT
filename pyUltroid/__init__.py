@@ -105,4 +105,14 @@ else:
 
     LOGS = getLogger("pyUltroid")
 
+
+    pbot = Client("aiu_userbot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN,in_memory=True)
+dispatcher = updater.dispatcher
+aiohttpsession = ClientSession()
+
+print("[INFO]: Getting Bot Info...")
+BOT_ID = dispatcher.bot.id
+BOT_NAME = dispatcher.bot.first_name
+BOT_USERNAME = dispatcher.bot.username
+
     ultroid_bot = asst = udB = vcClient = None
