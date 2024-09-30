@@ -235,18 +235,6 @@ async def _(event):
         await x.delete()
         await event.respond(get_string("ping").format(end, uptime, f"{ment}"), file=file)
 
-@ultroid_cmd(pattern="ping$", chats=[], type=["official", "assistant"])
-async def _(event):
-    ultroid_bot.parse_mode = CustomMarkdown()
-    user_id = OWNER_ID
-    ment = await mention_user(user_id)
-    prem = event.pattern_match.group(1
-    start = time.time()
-    x = await event.eor("Pong !")
-    end = round((time.time() - start) * 1000)
-    uptime = time_formatter((time.time() - start_time) * 1000)
-    await event.respond(get_string("ping").format(end, uptime, f"{ment}"))
-
 
 @ultroid_cmd(
     pattern="cmds$",
