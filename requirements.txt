@@ -4,6 +4,6 @@ telethon
 https://github.com/New-dev0/Telethon-Patch/archive/main.zip
 python-decouple
 python-dotenv
-git+https://github.com/pytgcalls/pytgcalls -U
-py-tgcalls -U
+git+https://github.com/pytgcalls/pytgcalls
+py-tgcalls
 pytgcalls==3.0.0dev22
