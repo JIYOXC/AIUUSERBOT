@@ -40,7 +40,7 @@ async def openai_chat_gpt(e):
         return await e.eor("__Cleared GPT-4o Chat History!__", time=6)
 
     eris = await e.eor(f"__Generating answer for:__\n`{query[:128]} ...`")
-    GPT_CHAT_HISTORY.append({"role": "user", "content": query})
+    GPT_CHAT_HISTORY.append({'role': 'user', 'content': query})
 
     try:
         data = {
@@ -57,8 +57,8 @@ async def openai_chat_gpt(e):
             re_json=True,
             post=True,
         )
-        response = request["choices"][0]["message"]["content"]
-        GPT_CHAT_HISTORY.append({"role": "assistant", "content": response})
+        response = request['choices'][0]['message']['content']
+        GPT_CHAT_HISTORY.append({'role': 'assistant', 'content': response})
     except Exception as exc:
         LOGS.warning(exc, exc_info=True)
         GPT_CHAT_HISTORY.pop()
