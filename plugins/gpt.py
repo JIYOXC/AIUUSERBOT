@@ -44,7 +44,7 @@ async def openai_chat_gpt(e):
 
     try:
         data = {
-            "model": "gpt-4o",
+            "model": "Gemini 1.5 Flash",
             "messages": list(GPT_CHAT_HISTORY),
         }
         request = await async_searcher(
