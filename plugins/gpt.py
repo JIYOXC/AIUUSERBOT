@@ -1,7 +1,7 @@
 import os
 from collections import deque
 from io import BytesIO
-
+import openai
 import requests
 
 from . import (
