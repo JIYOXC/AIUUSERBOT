@@ -57,7 +57,7 @@ async def openai_chat_gpt(e):
             re_json=True,
             post=True,
         )
-        response = request['choices'][0]['message']['content']
+        response['choices'][0]['message']['content']
         GPT_CHAT_HISTORY.append({'role': 'assistant', 'content': response})
     except Exception as exc:
         LOGS.warning(exc, exc_info=True)
