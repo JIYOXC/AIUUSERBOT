@@ -81,7 +81,7 @@ async def enhance_image(event):
         enhanced_image_binary = base64.b64decode(enhanced_image_base64)
 
         # Save the enhanced image to a file
-        enhanced_image_path = 'enhanced_image.jpg'
+        enhanced_image_path = 'upscale_image.jpg'
         with open(enhanced_image_path, 'wb') as img_file:
             img_file.write(enhanced_image_binary)
 
@@ -95,4 +95,4 @@ async def enhance_image(event):
 
         await msg.delete()
     else:
-        await msg.edit("Failed to enhance image.")
+        await msg.edit("Failed to upscale image.")
