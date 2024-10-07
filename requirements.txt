@@ -1,9 +1,0 @@
-# Important Requirements here.
-telethon
-# https://github.com/TeamUltroid/Telethon/archive/ultroid.zip
-https://github.com/New-dev0/Telethon-Patch/archive/main.zip
-python-decouple
-python-dotenv
-#git+https://github.com/pytgcalls/pytgcalls
-py-tgcalls
-#pytgcalls==3.0.0dev22
